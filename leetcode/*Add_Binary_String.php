@@ -1,10 +1,13 @@
 <?php
 // https://www.youtube.com/watch?v=QtEtcXPqRPk
 function addBinary($b1,$b2) {
+    
     if(strlen($b1) < strlen($b2)) {
+        $swap = $b1;
         $b1 = $b2;
-        $b2 = $b1;
+        $b2 = $swap;
     }
+   
     $result = "";
     $carry = false;
 
@@ -45,8 +48,8 @@ function addBinary($b1,$b2) {
    echo strrev($result) . "<br>";
 }
 
-// addBinary("11","1");
+addBinary("11","101");
 
-addBinary("101","1");
+// addBinary("101","1");
 
 // addBinary("1010","1011");
