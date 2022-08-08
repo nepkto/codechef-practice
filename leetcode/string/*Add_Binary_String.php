@@ -1,7 +1,10 @@
 <?php
 // https://www.youtube.com/watch?v=QtEtcXPqRPk
 function addBinary($b1,$b2) {
-    
+    $s = strtolower("A man, a plan, a canal: Panama");
+        $filter = preg_replace('/[^a-z^0-9]/','',$s);
+        echo $filter;
+        exit;
     if(strlen($b1) < strlen($b2)) {
         $swap = $b1;
         $b1 = $b2;
